@@ -1,0 +1,10 @@
+     
+o="Ore" c="Crystal"
+:ScanIndex=0 s="\n" if :ScanOn==0 then Goto2 end
+// Empty Lines to compensate for Lag, give the scanner time to work
+ 
+ 
+v=:ScanVol s=s+:ScanMat-c-o+"\n"+v+"\n" :ScanIndex++
+if :ScanIndex<:ScanResults then Goto3 end :Scanner=s :ScanOn=0 Goto2
+//Scanner Script by Softwerker
+//replace text for o and l base in line 1 based on your language
